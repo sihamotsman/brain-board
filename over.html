@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Productivity Dashboard</title>
+  <link rel="stylesheet" href="over.css">
+</head>
+
+<body>
+    <a href="index.html">Back to home</a>
+
+<div class="container">
+
+  <h1>Overview</h1>
+
+  <!-- TOP CARDS -->
+  <div class="cards">
+
+    <div class="card">
+      <h4>Today's Tasks</h4>
+      <h2 id="todayCount">0</h2>
+      <button>Focus on Today</button>
+    </div>
+
+    <div class="card">
+      <h4>Pending Tasks</h4>
+      <h2 id="pendingCount">0</h2>
+      <button>Tasks Pending</button>
+    </div>
+
+    <div class="card">
+      <h4>Tasks Completed</h4>
+      <h2 id="completedCount">0</h2>
+      <button style="background:#27ae60">Completed This Week</button>
+    </div>
+
+    <div class="card">
+      <h4>Productivity</h4>
+      <h2 id="productivity">🔥 0%</h2>
+      <p>Productivity Score</p>
+    </div>
+
+  </div>
+
+  <!-- GRID SECTION -->
+  <div class="grid">
+
+    <!-- TODAY'S GOALS -->
+    <div class="box">
+      <h3>Today's Goals</h3>
+
+      <div class="input-group">
+        <input id="goalInput" placeholder="New goal...">
+        <button onclick="addGoal()">Add</button>
+      </div>
+
+      <ul id="goalList"></ul>
+    </div>
+
+    <!-- SCHEDULE -->
+    <div class="box">
+      <h3>Schedule</h3>
+
+      <div class="input-group">
+        <input type="time" id="timeInput">
+        <input id="eventInput" placeholder="Event...">
+        <button onclick="addEvent()">Add</button>
+      </div>
+
+      <ul id="scheduleList"></ul>
+    </div>
+
+    <!-- CALENDAR -->
+    <div class="box">
+
+      <div class="calendar-header">
+        <button onclick="changeMonth(-1)">◀</button>
+        <h3 id="monthYear"></h3>
+        <button onclick="changeMonth(1)">▶</button>
+      </div>
+
+      <div id="calendarDays" class="days"></div>
+
+      <p id="selectedDate"></p>
+    </div>
+
+    <!-- PROGRESS -->
+    <!-- <div class="box">
+      <h3>Progress</h3>
+
+      <p>Project A</p>
+      <div class="progress">
+        <div class="progress-bar" style="width:75%"></div>
+      </div>
+
+      <p>Habit Tracker</p>
+      <div class="progress">
+        <div class="progress-bar" style="width:70%; background:#2ecc71;"></div>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- TASK OVERVIEW -->
+  <div class="tasks">
+
+    <div class="task-box red">
+      <h4>Urgent Tasks</h4>
+      <ul id="urgentTasks"></ul>
+    </div>
+
+    <div class="task-box blue">
+      <h4>Upcoming Deadlines</h4>
+      <ul id="upcomingTasks"></ul>
+    </div>
+
+    <div class="task-box green">
+      <h4>Personal / Work</h4>
+      <ul id="taskList"></ul>
+    </div>
+
+  </div>
+
+  <!-- ADD TASK -->
+  <div class="actions">
+
+    <input id="taskInput" placeholder="New task...">
+
+    <select id="category">
+      <option value="work">Work</option>
+      <option value="urgent">Urgent</option>
+      <option value="upcoming">Upcoming</option>
+    </select>
+
+    <button onclick="addTask()">Add Task</button>
+
+  </div>
+
+  <!-- QUOTE -->
+  <div class="quote-box">
+
+    <h3>Daily Quote</h3>
+
+    <textarea id="quoteInput" placeholder="Write your favorite quote..."></textarea>
+
+    <button onclick="saveQuote()">Save</button>
+
+    <p id="quoteDisplay"></p>
+
+  </div>
+
+</div>
+
+<script src="over.js"></script>
+
+</body>
+</html>

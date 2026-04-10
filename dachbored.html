@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monthly Productivity</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <!-- <script src="duch.js"></script> -->
+  <link rel="stylesheet" href="duchbored.css">
+</head>
+<body>
+    <a href="index.html">Back to home</a>
+    
+ 
+  <div class="header">
+    <div class="header-icon">
+      <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+        <rect x="2" y="10" width="4" height="8" rx="1" fill="white"/>
+        <rect x="8" y="6" width="4" height="12" rx="1" fill="#7ec8f7"/>
+        <rect x="14" y="2" width="4" height="16" rx="1" fill="#f4a32a"/>
+      </svg>
+    </div>
+    <h1>Monthly Productivity</h1>
+  </div>
+ 
+  <div class="stat-cards">
+    <div class="stat-card">
+      <div class="stat-value" id="stat-total">0</div>
+      <div class="stat-label">Total Tasks</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-done">0</div>
+      <div class="stat-label">Completed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-value" id="stat-rate">0%</div>
+      <div class="stat-label">Completion Rate</div>
+    </div>
+  </div>
+ 
+  <div class="panel">
+    <div class="input-row">
+      <input type="text" id="input-box" placeholder="Add a new task…" />
+      <button onclick="addTask()">Add</button>
+    </div>
+    <ul id="list-container"></ul>
+    <div class="empty-msg" id="empty-msg">No tasks yet. Add one above!</div>
+  </div>
+ 
+  <div class="panel">
+    <div class="chart-wrap">
+      <canvas id="taskChart"></canvas>
+    </div>
+    <div class="chart-legend">
+      <span><span class="legend-dot" style="background:#90caf9;"></span>Tasks Created</span>
+      <span><span class="legend-dot" style="background:#1a6fd4;"></span>Tasks Completed</span>
+    </div>
+  </div>
+ 
+  <script src="duch.js"></script>
+</body>
+</html>
