@@ -13,3 +13,9 @@ darkModeToggle.addEventListener('click', () => {
         darkModeToggle.textContent = "Dark Mode";
     }
 });
+const menuBtn = document.querySelector(".menu-button");
+const menuLinks = document.querySelector(".menu-links");
+
+menuBtn.addEventListener("click", () => {
+    menuLinks.classList.toggle("active");
+});
