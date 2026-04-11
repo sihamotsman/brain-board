@@ -409,35 +409,7 @@ body.dark-mode .container_left_text {
   text-align: center;
   color: #777;
 }
-@media (max-width: 1023px){
-    nav .menu{
-        display: none;
-        justify-content: center;
-    }
-    nav .menu-links{
-        display: flex;
-    }
-    nav .menu-button{
-        display: block;
-    }
-    nav .btn{
-        display: none;
-    }
-    nav .logo img{
-        display: none;
-    }
-    nav .logo h2{
-        display: none;
-    }
-    nav .logo1{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-    .littel1{
-        color: black;
-    }
-}
+
 
 .dark-mode-btn {
     padding: 10px 20px;
@@ -542,4 +514,147 @@ body.dark-mode .footer-links a:hover {
   transition: 0.3s;
   z-index: 1000;
 }
+/* =========================
+   📱 MOBILE (max 768px)
+========================= */
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    nav .menu {
+        display: none;
+    }
+
+    nav .btn {
+        display: none;
+    }
+
+    nav .menu-button {
+        display: block;
+        font-size: 30px;
+    }
+
+    nav .logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* HERO SECTION */
+    section {
+        text-align: center;
+        padding: 100px 20px 40px;
+    }
+
+    section h1 {
+        font-size: 28px;
+        margin: 20px 0;
+    }
+
+    section p {
+        font-size: 16px;
+        margin: 20px 0;
+    }
+
+    section .btn {
+        margin: 20px 0;
+    }
+
+    /* MAIN CONTAINER */
+    .container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .container_left h1 {
+        font-size: 22px;
+    }
+
+    .container_right {
+        transform: none;
+    }
+
+    /* CARDS */
+    .card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .card img {
+        margin: auto;
+    }
+
+    /* FOOTER */
+    .footer {
+        padding: 40px 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+
+/* =========================
+   📱 TABLET (769px - 1024px)
+========================= */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    /* NAVBAR */
+    nav .menu {
+        width: 50%;
+        font-size: 16px;
+    }
+
+    nav button {
+        width: 90px;
+        font-size: 14px;
+    }
+
+    /* HERO */
+    section h1 {
+        font-size: 36px;
+    }
+
+    section p {
+        font-size: 18px;
+    }
+
+    /* MAIN */
+    .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .container_left {
+        text-align: center;
+        align-items: center;
+    }
+
+    .container_right {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .card {
+        width: 45%;
+    }
+
+    /* FOOTER */
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .footer-links {
+        gap: 40px;
+    }
+}
+
 
